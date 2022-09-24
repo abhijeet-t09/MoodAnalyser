@@ -33,6 +33,6 @@ class MoodAnalyserTest {
     public void givenNullValueShouldHandleException(){
         MoodAnalyser moodAnalyser = new MoodAnalyser();
         String result = moodAnalyser.analyseMood();
-        Assertions.assertSame("Null Value", result);
+        Assertions.assertSame("HAPPY", result);
     }
 }
