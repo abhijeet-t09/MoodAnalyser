@@ -18,8 +18,7 @@ public class MoodAnalyser {
                 return "HAPPY";
         }
         catch (Exception e){
-            System.out.println("Exception Handled");
-            return "Null Value";
+            return "HAPPY";
         }
 
 //        if(message.toLowerCase().contains("sad"))
