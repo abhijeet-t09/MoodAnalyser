@@ -10,11 +10,23 @@ public class MoodAnalyser {
     }
 
     String analyseMood (){
-        if(message.toLowerCase().contains("sad"))
-            return "SAD";
-        else if (message.toLowerCase().contains("happy"))
-            return "HAPPY";
-        return message;
+
+        try {
+            if (message.toLowerCase().contains("sad"))
+                return "SAD";
+            else
+                return "HAPPY";
+        }
+        catch (Exception e){
+            System.out.println("Exception Handled");
+            return "Null Value";
+        }
+
+//        if(message.toLowerCase().contains("sad"))
+//            return "SAD";
+//        else if (message.toLowerCase().contains("happy"))
+//            return "HAPPY";
+//        return message;
     }
 
     public static void main(String[] args) {
