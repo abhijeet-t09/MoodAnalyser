@@ -1,8 +1,15 @@
 package com.bridgelabz;
 
 public class MoodAnalyser {
+    String message;
+    public MoodAnalyser() {
+    }
 
-    String analyseMood (String message){
+    public MoodAnalyser(String message) {
+        this.message = message;
+    }
+
+    String analyseMood (){
         if(message.toLowerCase().contains("sad"))
             return "SAD";
         else if (message.toLowerCase().contains("happy"))
@@ -12,10 +19,10 @@ public class MoodAnalyser {
 
     public static void main(String[] args) {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
-
-        String happyMood = moodAnalyser.analyseMood("I am in a Happy Mood");
+        String happyMood = moodAnalyser.analyseMood();
         System.out.println("Mood is " + happyMood);
-        String sadMood = moodAnalyser.analyseMood("I am in a Sad Mood");
+
+        String sadMood = moodAnalyser.analyseMood();
         System.out.println("Mood is " + sadMood);
     }
 }
